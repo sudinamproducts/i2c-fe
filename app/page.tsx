@@ -32,192 +32,133 @@ export default function Home() {
       <Navbar />
 
       {/* HERO SECTION */}
-      {/* <section className="pt-32 pb-24 bg-gradient-to-br from-emerald-50 via-white to-teal-50"> */}
-      {/* <div className="max-w-7xl mx-auto px-6 text-center">
-          <motion.h1
-            initial={{ opacity: 0, y: 40 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-5xl md:text-6xl font-extrabold text-gray-900"
-          >
-            Light Up Your World
-          </motion.h1>
+      <section className="relative pt-32 pb-28 overflow-hidden bg-gradient-to-br from-emerald-50 via-white to-teal-50">
+        {/* background glow */}
+        <div className="absolute -top-32 -right-32 w-[500px] h-[500px] bg-emerald-200/30 rounded-full blur-3xl" />
 
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.2 }}
-            className="mt-6 text-lg text-gray-600 max-w-2xl mx-auto"
-          >
-            Premium LED bulbs that save energy, last longer, and look stunning.
-          </motion.p>
-
-          <motion.button
-            whileHover={{ scale: 1.05 }}
-            className="mt-10 bg-emerald-500 text-white px-8 py-4 rounded-full font-semibold shadow-lg hover:bg-emerald-600 transition"
-          >
-            Shop Now
-          </motion.button>
-        </div> */}
-      {/* <motion.h1
-          initial={{ opacity: 0, y: 40 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          className="text-5xl md:text-6xl font-extrabold text-gray-900"
-        >
-          Powering Brighter Spaces
-        </motion.h1>
-
-        <motion.p
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.2 }}
-          className="mt-6 text-lg text-gray-600 max-w-2xl mx-auto"
-        >
-          Sudinam Products delivers high-quality LED lighting solutions designed for efficiency, durability, and modern living.
-        </motion.p> */}
-      {/* HERO SECTION */}
-      <section className="pt-32 pb-24 bg-gradient-to-br from-emerald-50 via-white to-teal-50 overflow-hidden">
-        <div className="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-16 items-center">
-          {/* LEFT CONTENT */}
+        <div className="relative max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-16 items-center">
+          {/* LEFT */}
           <div>
             <motion.h1
-              initial={{ opacity: 0, y: 40 }}
+              initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              className="text-5xl md:text-6xl font-extrabold text-gray-900"
+              transition={{ duration: 0.8, ease: "easeOut" }}
+              className="text-5xl md:text-6xl font-extrabold leading-tight"
             >
-              Powering Brighter Spaces
+              <span className="bg-gradient-to-r from-emerald-500 to-teal-500 bg-clip-text text-transparent">
+                Powering
+              </span>{" "}
+              Brighter Spaces
             </motion.h1>
 
             <motion.p
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 16 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2 }}
               className="mt-6 text-lg text-gray-600 max-w-xl"
             >
-              Sudinam Products delivers high-quality LED lighting solutions engineered for efficiency, durability, and modern spaces.
+              Sudinam Products delivers premium LED lighting solutions
+              engineered for efficiency, durability, and modern environments.
             </motion.p>
 
-            <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.4 }} className="mt-10 flex gap-4">
-              <button className="bg-emerald-500 text-white px-8 py-4 rounded-full font-semibold shadow-lg hover:bg-emerald-600 transition">
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 0.4 }}
+              className="mt-10 flex flex-wrap gap-4"
+            >
+              <button className="bg-emerald-500 text-white px-8 py-4 rounded-full font-semibold shadow-lg hover:shadow-emerald-300/40 hover:scale-[1.03] transition">
                 Shop Products
               </button>
-              <button className="border border-emerald-500 text-emerald-600 px-8 py-4 rounded-full font-semibold hover:bg-emerald-50 transition">
+              <button className="px-8 py-4 rounded-full font-semibold border border-emerald-500 text-emerald-600 hover:bg-emerald-50 transition">
                 View Categories
               </button>
             </motion.div>
           </div>
 
-          {/* RIGHT IMAGES */}
-          <div className="relative flex justify-center items-center">
-            {/* TRACK LIGHT IMAGE */}
+          {/* RIGHT */}
+          <div className="relative flex justify-center">
             <motion.img
               src="/spotl.webp"
               alt="LED Track Light"
-              initial={{ opacity: 0, y: -40 }}
+              initial={{ opacity: 0, y: -30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.9 }}
-              className="w-64 lg:w-72 drop-shadow-2xl z-20"
+              className="w-64 lg:w-72 z-20 drop-shadow-2xl"
             />
 
-            {/* LED BULBS IMAGE */}
             <motion.img
               src="/led-bulbs.webp"
               alt="LED Bulbs"
-              initial={{ opacity: 0, x: 60 }}
+              initial={{ opacity: 0, x: 40 }}
               animate={{ opacity: 1, x: 0 }}
-              transition={{ delay: 0.3, duration: 0.9 }}
-              className="absolute -bottom-12 right-0 w-72 lg:w-96 rounded-xl shadow-xl"
+              transition={{ delay: 0.3 }}
+              className="absolute -bottom-12 right-0 w-72 lg:w-96 rounded-2xl shadow-xl"
             />
           </div>
         </div>
       </section>
 
+      {/* HERO SECTION */}
+
       {/* </section> */}
 
       {/* CATEGORIES SECTION */}
-      {/* <section className="py-24 bg-white">
-        <div className="max-w-7xl mx-auto px-6">
-          <h2 className="text-4xl font-bold text-center mb-14">Explore Categories</h2>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {categories.map((cat, i) => (
-              <motion.div
-                key={i}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ delay: i * 0.1 }}
-                viewport={{ once: true }}
-                className={`rounded-2xl p-6 text-white shadow-xl bg-gradient-to-br ${cat.color}`}
-              >
-                <h3 className="text-2xl font-bold">{cat.title}</h3>
-                <p className="mt-3 opacity-90">{cat.desc}</p>
-                <button className="mt-6 bg-white text-gray-900 px-4 py-2 rounded-full font-medium hover:bg-gray-100 transition">View Products</button>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section> */}
-      {/* CATEGORIES SECTION */}
-      <section className="py-24 bg-white">
+      <section className="py-28 bg-white">
         <div className="max-w-7xl mx-auto px-6">
-          <h2 className="text-4xl font-bold text-center mb-14">Product Categories</h2>
+          <h2 className="text-4xl font-bold text-center mb-16">
+            Explore Our Categories
+          </h2>
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-10">
             {[
               {
                 title: "Home Lighting",
                 img: "/category-home.webp",
-                desc: "Energy-efficient LED bulbs for everyday living",
               },
               {
                 title: "Commercial Lighting",
                 img: "/category-commercial.webp",
-                desc: "High-performance lighting for offices & retail",
               },
               {
                 title: "Bulk & Wholesale",
                 img: "/category-bulk.webp",
-                desc: "Reliable LEDs for large-scale installations",
               },
               {
                 title: "Linear & Track Lights",
                 img: "/category-linear.webp",
-                desc: "Modern lighting for showrooms & interiors",
               },
             ].map((cat, i) => (
               <motion.div
                 key={i}
-                initial={{ opacity: 0, y: 30 }}
+                initial={{ opacity: 0, y: 24 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ delay: i * 0.1 }}
                 viewport={{ once: true }}
-                className="group bg-gray-50 rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition"
+                transition={{ delay: i * 0.1 }}
+                className="group relative rounded-2xl overflow-hidden shadow-lg cursor-pointer"
               >
-                {/* IMAGE */}
-                <div className="relative overflow-hidden">
-                  <motion.img
-                    src={cat.img}
-                    alt={cat.title}
-                    whileHover={{ scale: 1.08 }}
-                    transition={{ duration: 0.4 }}
-                    className="h-56 w-full object-cover"
-                  />
-                </div>
+                <img
+                  src={cat.img}
+                  alt={cat.title}
+                  className="h-72 w-full object-cover group-hover:scale-110 transition duration-500"
+                />
 
-                {/* CONTENT */}
-                <div className="p-6 text-center">
-                  <h3 className="text-xl font-bold text-gray-900">{cat.title}</h3>
-                  <p className="mt-3 text-gray-600 text-sm">{cat.desc}</p>
+                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent" />
 
-                  <button className="mt-5 inline-block text-emerald-600 font-semibold hover:underline">View Products →</button>
+                <div className="absolute bottom-6 left-6 right-6 text-white">
+                  <h3 className="text-xl font-bold">{cat.title}</h3>
+                  <span className="inline-block mt-3 text-sm font-medium opacity-90">
+                    View Products →
+                  </span>
                 </div>
               </motion.div>
             ))}
           </div>
         </div>
       </section>
+
+      {/* CATEGORIES SECTION */}
 
       {/* WHY CHOOSE US */}
       <section className="py-24 bg-gradient-to-r from-gray-50 to-gray-100">
@@ -249,9 +190,28 @@ export default function Home() {
       </footer> */}
       <footer className="bg-gray-900 text-gray-400 py-12">
         <div className="max-w-7xl mx-auto px-6 text-center">
-          <h3 className="text-xl font-bold text-white mb-2">SUDINAM PRODUCTS</h3>
-          <p className="mb-4">Reliable LED Lighting Solutions for Homes & Businesses</p>
-          <p className="text-sm">© 2026 Sudinam Products. All rights reserved.</p>
+          <h3 className="text-xl font-bold text-white mb-2">
+            SUDINAM PRODUCTS
+          </h3>
+          <div className="text-sm text-gray-400">
+            <p>S N Puram Rd, Vadakkumpad</p>
+            <p>Thalassery, Kerala 670649, India</p>
+            <p className="mt-2">
+              Phone:{" "}
+              <a
+                href="tel:+919020992577"
+                className="text-emerald-400 hover:underline"
+              >
+                +91 90209 92577
+              </a>
+            </p>
+          </div>
+          <p className="mb-4">
+            Reliable LED Lighting Solutions for Homes & Businesses
+          </p>
+          <p className="text-sm">
+            © 2026 Sudinam Products. All rights reserved.
+          </p>
         </div>
       </footer>
     </>
