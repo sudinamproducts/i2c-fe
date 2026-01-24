@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import { ShoppingCart, Lightbulb, Menu, X } from "lucide-react";
+import Image from "next/image";
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
@@ -15,7 +16,15 @@ export default function Navbar() {
           href="/"
           className="flex items-center gap-2 text-xl font-extrabold tracking-wide"
         >
-          <Lightbulb className="text-emerald-500" />
+          {/* <Lightbulb className="text-emerald-500" />/ */}
+          <Image
+            src="/mainicon.png"
+            alt="Main Icon"
+            width={32}
+            height={32}
+            className="object-contain"
+            priority
+          />
           <span className="text-emerald-600">SUDINAM</span>
           <span className="text-gray-800">PRODUCTS</span>
         </Link>
